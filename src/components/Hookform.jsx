@@ -23,6 +23,7 @@ const Hookform = props =>  {
                     value= {firstname}
                     onChange={(e)=> setFirstname(e.target.value)}
                 />
+                <span className="text-danger">{firstname.length > 2 ? "" : "First Name must be 3 characters."}</span>
             </div>
             <div className="form-group">
                 <label>Last Name : </label>
@@ -33,6 +34,7 @@ const Hookform = props =>  {
                     value= {lastname}
                     onChange={(e)=> setLastname(e.target.value)}
                 />
+                <span className="text-danger">{lastname.length > 2 ? "" : "Last Name must be 3 characters."}</span>
             </div>
             <div className="form-group">
                 <label>Email : </label>
@@ -43,6 +45,7 @@ const Hookform = props =>  {
                     value= {email}
                     onChange={(e)=> setEmail(e.target.value)}
                 />
+                <span className="text-danger">{email.length > 4 ? "" : "Email must be 5 characters."}</span>
             </div>
             <div className="form-group">
                 <label>Password : </label>
@@ -53,6 +56,8 @@ const Hookform = props =>  {
                     value= {password}
                     onChange={(e)=> setPassword(e.target.value)}
                 />
+                <span className="text-danger">{password.length > 7 ? "" : "Password must be 8 characters."}</span>
+            
             </div>
             <div className="form-group">
                 <label>Confirm Password : </label>
@@ -60,9 +65,12 @@ const Hookform = props =>  {
                     type="text"  
                     className="form-control"
                     name="confirmPassword"
-                    value= {confirmPassword}
+                    value= {confirmPassword} 
                     onChange={(e)=> setConfirmedPassword(e.target.value)}
                 />
+                
+                
+
             </div>
         
             
